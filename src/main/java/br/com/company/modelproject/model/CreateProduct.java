@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -16,7 +17,11 @@ import lombok.NoArgsConstructor;
 @Getter
 public class CreateProduct {
 
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+private static final String SEQUENCE_CREATE_PRODUCT = "create_product_id_seq";
+	
+	@Id
+	@SequenceGenerator(name = SEQUENCE_CREATE_PRODUCT, sequenceName = SEQUENCE_CREATE_PRODUCT, schema = "public", initialValue = 1, allocationSize = 1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE_CREATE_PRODUCT)
 	private Long id;
 	private Feedstock feedstock;
 	private Double quantityTotal;
