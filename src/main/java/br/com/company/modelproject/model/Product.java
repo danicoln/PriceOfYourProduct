@@ -31,6 +31,8 @@ public class Product implements Serializable {
 	private Double quantity;
 	@ManyToOne
 	private Inventory inventory;
+	@ManyToOne
+	private Feedstock feedstock;
 
 	
 	public Integer getId() {

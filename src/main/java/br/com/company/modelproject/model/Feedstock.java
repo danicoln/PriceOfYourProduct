@@ -8,6 +8,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.Getter;
@@ -29,6 +30,8 @@ public class Feedstock implements Serializable {
 	private Double quantityPackage;
 	private Double qtdeMedidaPcte;
 	private Double unitaryValue;
+	@ManyToOne
+	private CustFinalProduct cfp;
 
 	public Double quantityTotal() {
 		return this.quantityPackage * this.qtdeMedidaPcte;
@@ -37,5 +40,6 @@ public class Feedstock implements Serializable {
 	public Double valueTotal() {
 		return this.quantityPackage * this.unitaryValue;
 	}
+	
 	
 }

@@ -28,7 +28,5 @@ private static final String SEQUENCE_CREATE_PRODUCT = "create_product_id_seq";
 	private Measurement unit;
 	private Double value;
 	
-//	public double unitaryValue() {
-//		
-//	}
+	
 }
