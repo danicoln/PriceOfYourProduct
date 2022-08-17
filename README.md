@@ -35,11 +35,11 @@ cd backend
 ./mvnw spring-boot:run
 ```
 
-```
-
 # Autor
 
 Daniel Lincoln M. F. Silva
 
-LinkedIn: https://www.linkedin.com/in/daniellincolndev/
+LinkedIn: https://www.linkedin.com/in/daniellincolndev
 Email: lincolndeveloper@outlook.com
+
+```
