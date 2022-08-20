@@ -34,7 +34,6 @@ public class Product implements Serializable {
 	@ManyToOne
 	private Feedstock feedstock;
 
-	
 	public Integer getId() {
 		return id;
 	}

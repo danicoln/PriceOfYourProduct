@@ -22,20 +22,20 @@ import jakarta.transaction.Transactional;
 public class ProductController {
 
 	@Autowired
-	ProductRepository productRepository;
+	private ProductRepository repository;
 	
 	/*CRUD*/
 	
 	/*method get all product*/
 	@GetMapping("/product")
 	public List<Product> getAllProduct(){
-		return productRepository.findAll();
+		return repository.findAll();
 	}
 	
 	/*method get product by id*/
 	@GetMapping("/product/{id}")
 	public Product getProductById(@PathVariable Long id) {
-	return productRepository.findById(id).get();
+	return repository.findById(id).get();
 	}
 	
 	// Criar um método que atualiza o item.
@@ -55,16 +55,18 @@ public class ProductController {
 	@Transactional
 	@PostMapping("/product")
 	public Product saveProduct(@RequestBody Product product) {
-		return productRepository.save(product);
+		return repository.save(product);
 	}
+	
+
 	
 	/*method delete product*/
 	@Transactional
 	@DeleteMapping("/{id}")
 	public ResponseEntity<?> deleteProduct(@PathVariable Long id) {
-		Optional<Product> optional = productRepository.findById(id);
+		Optional<Product> optional = repository.findById(id);
 		if(optional.isPresent()){
-			productRepository.deleteById(id);
+			repository.deleteById(id);
 			return ResponseEntity.ok().build();	
 		}
 		return ResponseEntity.notFound().build();

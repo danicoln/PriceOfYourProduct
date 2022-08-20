@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @SpringBootApplication
-@EntityScan(basePackages = {"br.com.company.modelproject.model"})
-@ComponentScan(basePackages = {"modelproject.*"})
-@EnableJpaRepositories(basePackages = {"br.com.company.modelproject.repository"})
-@EnableTransactionManagement
-@EnableWebMvc
-@RestController
-@EnableAutoConfiguration
+//@EntityScan(basePackages = {"br.com.company.modelproject.model"})
+//@ComponentScan(basePackages = {"modelproject.*"})
+//@EnableJpaRepositories(basePackages = {"br.com.company.modelproject.repository"})
+//@EnableTransactionManagement
+//@EnableWebMvc
+//@RestController
+//@EnableAutoConfiguration
 public class ModelProjectApplication {
 
 	public static void main(String[] args) {

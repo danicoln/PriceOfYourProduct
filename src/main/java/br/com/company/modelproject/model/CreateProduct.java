@@ -19,6 +19,9 @@ public class CreateProduct {
 
 private static final String SEQUENCE_CREATE_PRODUCT = "create_product_id_seq";
 	
+
+	/*Implementar a estratégia de criação do produto*/
+
 	@Id
 	@SequenceGenerator(name = SEQUENCE_CREATE_PRODUCT, sequenceName = SEQUENCE_CREATE_PRODUCT, schema = "public", initialValue = 1, allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE_CREATE_PRODUCT)
