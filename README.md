@@ -9,7 +9,7 @@ Price Of Your Product é uma aplicação construída com a idéia de trazer ao u
 A aplicação consiste em inserir dados da matéria-prima / insumos que serão utilizados, com quantidades, custos, despesas fixas e variáveis, entre outros. 
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/danicoln/assets/blob/main/Sem%20t%C3%ADtulo.png)
+![Modelo Conceitual](assets)
 
 # Tecnologias utilizadas
 ## Back end
